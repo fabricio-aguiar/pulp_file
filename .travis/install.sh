@@ -28,7 +28,7 @@ cd $TRAVIS_BUILD_DIR/../pulpcore/containers/
 # starting point:
 # https://stackoverflow.com/a/50687120
 #
-# If we are on a tag
+# If we are on a tag:
 if [ -n "$TRAVIS_TAG" ]; then
   TAG=$(echo $TRAVIS_TAG | tr / _)
 # If we are on a PR
