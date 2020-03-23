@@ -18,6 +18,8 @@ jobs:
           REPOSITORY: ${{ github.event.repository.full_name }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
+          echo $REDMINE_API_KEY
+          echo $GITHUB_API_TOKEN
           echo ::group::dependencies
           pip install python-redmine PyGithub
           echo ::endgroup::
