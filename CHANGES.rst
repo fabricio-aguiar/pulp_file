@@ -13,6 +13,19 @@ Changelog
 
 .. towncrier release notes start
 
+1.0.0 (2020-05-07)
+==================
+
+
+Misc
+----
+
+- `#6514 <https://pulp.plan.io/issues/6514>`_
+
+
+----
+
+
 0.3.0 (2020-04-16)
 ==================
 
