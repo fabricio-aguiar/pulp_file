@@ -1,3 +1,1 @@
-__version__ = "1.0.0"
-
-default_app_config = "pulp_file.app.PulpFilePluginAppConfig"
+__version__ = "8.8.8.dev"__version__ = "8.8.8.dev"__version__ = "8.8.8.dev"
