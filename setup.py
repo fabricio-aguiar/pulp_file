@@ -2,14 +2,14 @@
 
 from setuptools import setup, find_packages
 
-requirements = ["pulpcore>=4.0,<4.1"]
+requirements = ["pulpcore>=4.0"]
 
 with open("README.rst") as f:
     long_description = f.read()
 
 setup(
     name="pulp-file",
-    version="1.0.0",
+    version="1.0.1.dev",
     description="File plugin for the Pulp Project",
     long_description=long_description,
     license="GPLv2+",
