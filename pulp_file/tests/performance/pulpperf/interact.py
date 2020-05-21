@@ -2,16 +2,20 @@ import logging
 import requests
 import tempfile
 import time
-import os
+
+from pulp_smash import config
 
 from .utils import measureit, urljoin
 
-BASE_ADDR = os.environ.get("BASE_ADDR", "http://localhost:24817")
+cfg = config.get_config()
+configuration = cfg.get_bindings_config()
+BASE_ADDR = configuration.host
 
 
 def get(url, params={}):
     """Wrapper around requests.get with some simplification in our case."""
     url = BASE_ADDR + url
+    print(f"GET {url}")
 
     r = requests.get(url=url, params=params)
     r.raise_for_status()
@@ -36,6 +40,7 @@ def get_results(url, params={}):
 def post(url, data):
     """Wrapper around requests.post with some simplification in our case."""
     url = BASE_ADDR + url
+    print(f"POST {url}")
 
     r = requests.post(url=url, json=data)
     r.raise_for_status()

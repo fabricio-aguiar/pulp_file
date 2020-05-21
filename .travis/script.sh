@@ -77,7 +77,7 @@ cmd_prefix bash -c "PULP_DATABASES__default__USER=postgres django-admin test --n
 # Run functional tests
 export PYTHONPATH=$TRAVIS_BUILD_DIR:$TRAVIS_BUILD_DIR/../pulpcore${PYTHONPATH:+:${PYTHONPATH}}
 
-if [[ "$TEST" == "performance" ]]; then
+if [[ "$TEST" == "pulp" ]]; then
   wget -qO- https://github.com/crazy-max/travis-wait-enhanced/releases/download/v1.0.0/travis-wait-enhanced_1.0.0_linux_x86_64.tar.gz | sudo tar -C /usr/local/bin -zxvf - travis-wait-enhanced
   echo "--- Performance Tests ---"
   if [[ -z ${PERFORMANCE_TEST+x} ]]; then
@@ -89,7 +89,7 @@ if [[ "$TEST" == "performance" ]]; then
 fi
 
 if [ -f $FUNC_TEST_SCRIPT ]; then
-  source $FUNC_TEST_SCRIPT
+  echo "YEAH"
 else
     pytest -v -r sx --color=yes --pyargs pulp_file.tests.functional
 fi
