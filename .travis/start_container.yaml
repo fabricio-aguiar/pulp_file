@@ -35,6 +35,7 @@
         auto_remove: true
         recreate: true
         privileged: false
+        output_logs: true
         networks:
           - name: pulp_ci_bridge
             aliases: "{{ item.name }}"
